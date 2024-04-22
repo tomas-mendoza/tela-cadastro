@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de cadastro</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/cadastro.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de cadastro</h1>
+    <nav>
+      <a href="./index.html" class="btn link">Início</a>
+      <a href="./consulta.html" class="btn link">Consultar</a>
+    </nav>
+  </header>
+  <main>
+    <form onsubmit="event.preventDefault()">
+        <div class="input-container">
+          <label for="name">Nome</label>
+          <input type="text" id="name" min="3" max="150" required>
+        </div>
+        <div class="input-container">
+          <label for="birthdate">Data de nascimento</label>
+          <input type="date" name="birthdate" id="birthdate" required>
+        </div>
+        <div class="input-container">
+          <label for="cpf">CPF</label>
+          <input type="text" name="cpf" id="cpf" required min="11" max="11">
+        </div>
+        <div class="input-container">
+          <label for="cnpj">CNPJ</label>
+          <input type="text" name="cnpj" id="cnpj">
+        </div>
+        <div class="input-container">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="input-container">
+          <label for="gender">Gênero</label>
+          <select name="gender" id="gender" required>
+            <option value="none" selected>Selecione um gênero</option>
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="other">Outro</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="profile-image">Foto de perfil</label>
+          <input type="text" name="profile-image" id="profile-image" placeholder="Insira o link da imagem">
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary" style="max-width: 200px;" onclick="save()">Cadastrar</button>
+          <button type="reset" class="btn secondary" style="max-width: 200px;">Limpar</button>
+        </div>
+    </form>
+  </main>
+  <footer>
+    <p>Feito por <a href="#">Tomás</a></p>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
