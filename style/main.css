@@ -54,6 +54,15 @@ nav {
   background-color: rgb(66, 66, 66);
 }
 
+.destructive {
+  background-color: #e62031;
+  color: white;
+}
+
+.destructive:hover {
+  background-color: #e32d3d;
+}
+
 .secondary:hover {
   outline: 1px solid gray;
 }

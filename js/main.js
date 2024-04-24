@@ -7,10 +7,24 @@ function reset() {
   document.getElementById('cnpj').valuee = ''
   document.getElementById('email').value = ''
   document.getElementById('gender').value = ''
-  document.getElementById('profile-image').value = ''
+  document.getElementById('profile').value = ''
 }
 
 function save() {
+ if(document.getElementById('index').value >= 0) {
+    const index = parseInt(document.getElementById('index').value);
+    people[index].name = document.getElementById('name').value;
+    people[index].birthdate = document.getElementById('birthdate').value;
+    people[index].cpf = document.getElementById('cpf').value;
+    people[index].cnpj = document.getElementById('cnpj').value || null;
+    people[index].email = document.getElementById('email').value;
+    people[index].gender = document.getElementById('gender').value;
+    people[index].profile = document.getElementById('profile').value || null;
+    localStorage.setItem('people', JSON.stringify(people));
+    reset();
+    return;
+  }
+
   people.push({
     name: document.getElementById('name').value,
     birthdate: document.getElementById('birthdate').value,
@@ -18,7 +32,7 @@ function save() {
     cnpj: document.getElementById('cnpj').value || null,
     email: document.getElementById('email').value,
     gender: document.getElementById('gender').value,
-    profile: document.getElementById('profile-image').value || null
+    profile: document.getElementById('profile').value || null
   });
 
   localStorage.setItem('people', JSON.stringify(people));

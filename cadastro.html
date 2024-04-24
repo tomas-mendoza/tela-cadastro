@@ -17,6 +17,7 @@
   </header>
   <main>
     <form onsubmit="event.preventDefault()">
+        <input type="hidden" name="index" id="index" value="">
         <div class="input-container">
           <label for="name">Nome</label>
           <input type="text" id="name" min="3" max="150" required>
@@ -47,8 +48,8 @@
           </select>
         </div>
         <div class="input-container">
-          <label for="profile-image">Foto de perfil</label>
-          <input type="text" name="profile-image" id="profile-image" placeholder="Insira o link da imagem">
+          <label for="profile">Foto de perfil</label>
+          <input type="text" name="profile" id="profile" placeholder="Insira o link da imagem">
         </div>
         <div class="actions">
           <button class="btn primary" style="max-width: 200px;" onclick="save()">Cadastrar</button>
@@ -60,5 +61,6 @@
     <p>Feito por <a href="#">Tomás</a></p>
   </footer>
   <script src="./js/main.js"></script>
+  <script src="./js/cadastro.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ main {
 
 .table {
   display: grid;
-  grid-template-columns: repeat(7, 200px);
+  grid-template-columns: repeat(9, 200px);
   grid-auto-rows: 40px;
   gap: 0px;
   overflow: scroll;
