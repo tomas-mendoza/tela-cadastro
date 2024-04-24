@@ -11,8 +11,8 @@ function reset() {
 }
 
 function save() {
- if(document.getElementById('index').value >= 0) {
-    const index = parseInt(document.getElementById('index').value);
+  const index = parseInt(document.getElementById('index').value);
+  if(!isNaN(index)) {
     people[index].name = document.getElementById('name').value;
     people[index].birthdate = document.getElementById('birthdate').value;
     people[index].cpf = document.getElementById('cpf').value;
