@@ -20,6 +20,15 @@ main {
   outline: 1px solid black;
 }
 
+.table > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  outline: 1px solid black; 
+}
+
 .head {
   background-color: black;
   color: white;

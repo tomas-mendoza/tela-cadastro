@@ -67,6 +67,10 @@ nav {
   outline: 1px solid gray;
 }
 
+.gray {
+  background-color: #c4c3c0;
+}
+
 footer {
   padding: 20px;
   text-align: center;
